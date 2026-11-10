@@ -1,0 +1,30 @@
+<ActionBar>
+  <NavigationButton visibility="collapsed"></NavigationButton>
+  <GridLayout columns="auto, *">
+    <Label col="0" text="Menu" class="menu-button" (tap)="onDrawerButtonTap()"></Label>
+    <Label col="1" text="Tareas" class="action-bar-title"></Label>
+  </GridLayout>
+</ActionBar>
+
+<GridLayout rows="auto, auto, *">
+  <Label row="0" [text]="saludo" class="titulo"></Label>
+
+  <GridLayout row="1" columns="*, auto" class="barra-agregar">
+    <TextField col="0" hint="Nueva tarea" [(ngModel)]="nuevaTarea"></TextField>
+    <Button col="1" text="Agregar" (tap)="agregar()"></Button>
+  </GridLayout>
+
+  <ScrollView row="2">
+    <StackLayout>
+      <GridLayout
+        *ngFor="let t of tareas"
+        columns="*, auto"
+        class="tarea-item"
+        (tap)="abrir(t)"
+      >
+        <Label col="0" [text]="t.titulo" textWrap="true" class="tarea-titulo"></Label>
+        <Label col="1" [text]="t.hecha ? 'Hecha' : 'Pendiente'" class="tarea-estado"></Label>
+      </GridLayout>
+    </StackLayout>
+  </ScrollView>
+</GridLayout>

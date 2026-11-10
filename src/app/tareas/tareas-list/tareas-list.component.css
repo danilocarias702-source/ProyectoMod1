@@ -1,0 +1,23 @@
+.titulo {
+  font-size: 20;
+  font-weight: bold;
+  padding: 12;
+}
+
+.barra-agregar {
+  padding: 8;
+}
+
+.tarea-item {
+  padding: 12;
+  margin: 4 8;
+  background-color: #eeeeee;
+}
+
+.tarea-titulo {
+  font-size: 16;
+}
+
+.tarea-estado {
+  font-size: 14;
+}

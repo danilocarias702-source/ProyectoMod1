@@ -1,0 +1,14 @@
+.detalle {
+  padding: 20;
+}
+
+.detalle-titulo {
+  font-size: 24;
+  font-weight: bold;
+  margin-bottom: 12;
+}
+
+.detalle-estado {
+  font-size: 16;
+  margin-bottom: 16;
+}

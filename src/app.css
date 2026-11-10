@@ -1,0 +1,44 @@
+@import '@nativescript/theme/css/core.css';
+@import '@nativescript/theme/css/default.css';
+
+.nt-drawer__header {
+  padding: 24 16 16 16;
+  background-color: #2e7d32;
+  color: #ffffff;
+}
+
+.nt-drawer__header-brand {
+  font-size: 22;
+  font-weight: bold;
+}
+
+.nt-drawer__header-pending {
+  font-size: 14;
+  margin-top: 6;
+}
+
+.nt-drawer__list-item {
+  padding: 12 16;
+  font-size: 16;
+}
+
+.nt-drawer__list-item--selected {
+  background-color: #c8e6c9;
+}
+
+.menu-button {
+  font-size: 16;
+  padding: 0 12;
+  vertical-align: center;
+}
+
+.page-title {
+  font-size: 22;
+  font-weight: bold;
+  padding: 16;
+}
+
+.page-text {
+  font-size: 16;
+  padding: 0 16;
+}

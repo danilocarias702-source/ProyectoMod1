@@ -1,0 +1,7 @@
+<ActionBar title="Detalle de tarea"></ActionBar>
+
+<StackLayout class="detalle">
+  <Label [text]="tarea?.titulo" class="detalle-titulo" textWrap="true"></Label>
+  <Label [text]="tarea?.hecha ? 'Estado: hecha' : 'Estado: pendiente'" class="detalle-estado"></Label>
+  <Button [text]="tarea?.hecha ? 'Marcar como pendiente' : 'Marcar como hecha'" (tap)="alternar()"></Button>
+</StackLayout>

@@ -1,0 +1,67 @@
+<RadSideDrawer [drawerTransition]="sideDrawerTransition">
+  <GridLayout tkDrawerContent rows="auto, *" class="nt-drawer__content">
+    <StackLayout row="0" class="nt-drawer__header">
+      <Label text="Tareas Drawer" class="nt-drawer__header-brand"></Label>
+      <Label [text]="'Pendientes: ' + pendientes" class="nt-drawer__header-pending"></Label>
+    </StackLayout>
+    <ScrollView row="1">
+      <StackLayout class="nt-drawer__body">
+        <GridLayout
+          columns="auto, *"
+          class="nt-drawer__list-item"
+          [class.nt-drawer__list-item--selected]="isComponentSelected('/home')"
+          (tap)="onNavigationItemTap('/home')"
+        >
+          <Label col="1" text="Home"></Label>
+        </GridLayout>
+
+        <GridLayout
+          columns="auto, *"
+          class="nt-drawer__list-item"
+          [class.nt-drawer__list-item--selected]="isComponentSelected('/browse')"
+          (tap)="onNavigationItemTap('/browse')"
+        >
+          <Label col="1" text="Browse"></Label>
+        </GridLayout>
+
+        <GridLayout
+          columns="auto, *"
+          class="nt-drawer__list-item"
+          [class.nt-drawer__list-item--selected]="isComponentSelected('/search')"
+          (tap)="onNavigationItemTap('/search')"
+        >
+          <Label col="1" text="Search"></Label>
+        </GridLayout>
+
+        <GridLayout
+          columns="auto, *"
+          class="nt-drawer__list-item"
+          [class.nt-drawer__list-item--selected]="isComponentSelected('/featured')"
+          (tap)="onNavigationItemTap('/featured')"
+        >
+          <Label col="1" text="Featured"></Label>
+        </GridLayout>
+
+        <GridLayout
+          columns="auto, *"
+          class="nt-drawer__list-item"
+          [class.nt-drawer__list-item--selected]="isComponentSelected('/settings')"
+          (tap)="onNavigationItemTap('/settings')"
+        >
+          <Label col="1" text="Settings"></Label>
+        </GridLayout>
+
+        <GridLayout
+          columns="auto, *"
+          class="nt-drawer__list-item"
+          [class.nt-drawer__list-item--selected]="isComponentSelected('/tareas')"
+          (tap)="onNavigationItemTap('/tareas')"
+        >
+          <Image col="0" src="res://ic_tareas" width="24" height="24" class="m-r-10"></Image>
+          <Label col="1" text="Tareas"></Label>
+        </GridLayout>
+      </StackLayout>
+    </ScrollView>
+  </GridLayout>
+  <page-router-outlet tkMainContent></page-router-outlet>
+</RadSideDrawer>
